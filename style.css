@@ -1,0 +1,48 @@
+#grid {
+    display: flex;
+    flex-wrap: wrap;    
+    align-self: center;
+    margin: auto;
+    margin-top: 528px;
+    border-radius: 5px;
+   
+    
+    
+}
+body{
+    background-image: url(images/floor.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+   
+    margin:auto;
+    background-position: center;
+    height: 100%;
+}
+#sketch{
+    background-image: url(images/Etch-a-sketch1500.png);
+    width: 1900px;
+    height: 100%;
+    
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    
+    background-position: center;
+}
+html {
+    height: 100%;
+}
+   
+
+
+
