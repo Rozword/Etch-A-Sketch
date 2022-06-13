@@ -1,101 +1,92 @@
 @import url('https://fonts.googleapis.com/css2?family=Aclonica&family=Roboto&display=swap');
 
+
+
+#sketch{
+    max-width: 100%;
+    max-height: 95%;          
+    display: flex;
+    flex-direction: column;    
+    justify-content: space-evenly;
+    align-items: center;    
+    position: relative;
+    gap:0px ;    
+    background-position: center;  
+}
+
 #grid {
     display: flex;
-    flex-wrap: wrap;    
-    margin: auto;  
-    flex-shrink:1;
-    width: 680px;
-    height: 490px;    
-    border: 8px solid black;
-    border-radius: 15px;    
-    min-width: 0;
-    min-height: 0;
+    flex-wrap: wrap;      
+    margin-bottom: 40px;
+    width: 780px;
+    height: 480px;       
+    /*border: 8px solid black;*/
+    border-radius: 15px;   
     position: absolute;
-    z-index: 2;
-    
-    
-    background-color: grey;
-    
-    
-    
+    z-index: 2;   
+    background-color: lightgrey;       
 }
-body{
-    background-image: url(images/floor.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
+#forms{    
+    margin-bottom: 680px;
     display: flex;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: center;
-   
-    margin:auto;
-    background-position: center;
-    height: 100vh;
-    max-width: 1200px;
-}
-#sketch{
-    /*background-image: url(images/Etch-a-sketch2636.png);*/
-    width: 100%;
-    height: 95%;    
-   
-   
-    display: flex;
-    flex-direction: column;
-    flex-shrink: 0;
-    justify-content: space-evenly;
-    align-items: center;
-    min-width: 0;
-    min-height: 0;
-    position: relative;
-    gap:0px ;
+    gap: 80px;
     
-    background-position: center;    
-
-}
-
-#forms{
-    
-    display: flex;
-    gap: 50px;
-    cursor: pointer;
     padding: 16px 32px;
+    position: absolute;
+    z-index: 3;
 }
 
 label{
     font-family: 'Aclonica';
     font-weight: bold;
-
 }
 input{
     border: 2px solid  #04AA6D;
     border-radius: 4px;
     padding: 5px 5px;
   }
-
-#buttonCells, #buttonColor{
+#buttonCells, #buttonColor, #buttonBoardColor{
     background-color: #04AA6D;
     color: white;
     border: none;
     padding: 8px 18px;
     border-radius: 15px;
-
+    cursor: pointer;
 }
 
-#pic {
-
-    height: 85%;
-    width: 100%;
-    object-fit: contain;
-    
+#pic {       
+    margin-top: 50px;
+    object-fit: contain;    
     z-index: 1;
+    display: flex;   
+    min-height: 95vh;
+    min-width: 100vh
+}
+#body{
+    background-image: url(images/floor.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
     display: flex;
-    
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    margin:auto;
+    background-position: center;
+    height: 100vh;    
+    width: 1200px;  
+
 }
 
-html {
-    height: 100%;
+#wrapper {
+    margin-left:auto;
+    margin-right:auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    
+    width:960px;
+    height:980px;
 }
    
 
