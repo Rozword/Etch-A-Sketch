@@ -19,8 +19,8 @@ for (i=1; i<=a; i++){
       
         cell = document.createElement('div');
         cell.className = 'cells';       
-        cell.style.width = `${700/a}px`;
-        cell.style.height = `${500/b}px`;
+        cell.style.width = `${680/a}px`;
+        cell.style.height = `${490/b}px`;
         cell.style.minHeight = '0';
         cell.style.minWidth = '0';
         cell.style.display = 'flex';     
