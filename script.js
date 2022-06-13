@@ -1,15 +1,14 @@
-const grid = document.querySelector('#grid');
 
 
-
-
-   
-
+const grid = document.querySelector('#grid'); 
 
 let cell;
 let hcells;
 let vcells;
 let pencilColor;
+
+alert("Welcome to digital Etch A Sketch!\nPlease enter the number of cells(pixels) that you'd like in your board and a color pencil.\nAfter that, you can start drawing!");
+alert('Enjoy!');
 
 function divs(a,b){
 
@@ -30,39 +29,22 @@ for (i=1; i<=a; i++){
          
         grid.appendChild(cell);
       }
-      }
-      
+      }      
 }
-
-
-
-
 grid.addEventListener('mouseover', function(e){  
       mouseDown = true;
-      e.target.style.backgroundColor = `${pencilColor}`;
-      
-
+      e.target.style.backgroundColor = `${pencilColor}`;   
       })
-
-
-
-//const cells = document.querySelectorAll('.cells');
-//console.log(cells);
 
 
 let buttonCells = document.querySelector('#buttonCells');
 buttonCells.addEventListener('click', function(e){
-      
       hcells = document.getElementById('hcells').value;      
-      vcells = document.getElementById('vcells').value;
-      
-      divs(hcells,vcells);
-      
+      vcells = document.getElementById('vcells').value;      
+      divs(hcells,vcells);      
 })
       
 let buttonColor = document.querySelector('#buttonColor');
 buttonColor.addEventListener('click', function(e){
       pencilColor = document.getElementById('color').value;      
 })
-
-
