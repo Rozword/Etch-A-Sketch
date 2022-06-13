@@ -7,46 +7,62 @@ const grid = document.querySelector('#grid');
 
 
 let cell;
-
+let hcells;
+let vcells;
+let pencilColor;
 
 function divs(a,b){
 
 for (i=1; i<=a; i++){
+      
       for(let j=1; j<=b; j++){
+      
         cell = document.createElement('div');
-        cell.className = 'cells';
-       
-        cell.style.width = `${(550-(a*a))/a}px`;
-        cell.style.height = `${(350-(b*b))/b}px`;
-        cell.style.border = '1px dotted black';
-        cell.style.display = 'flex';
-        
+        cell.className = 'cells';       
+        cell.style.width = `${700/a}px`;
+        cell.style.height = `${500/b}px`;
+        cell.style.minHeight = '0';
+        cell.style.minWidth = '0';
+        cell.style.display = 'flex';     
         cell.style.flexWrap = 'wrap';
-        cell.style.backgroundColor = 'white';
-        grid.style.width = `${550}px`;
-        grid.style.height = `${350}px`;
-        grid.style.border = '8px solid black';
-        grid.style.borderRadius= '15px'
-        grid.style.flexWrap = 'wrap'
-        
-
+        cell.style.backgroundColor = 'lightgrey';   
+        cell.style.flexShrink = '1';
+         
         grid.appendChild(cell);
       }
       }
       
 }
 
-divs(64,64);
 
-const cells = document.querySelectorAll('.cells');
-console.log(cells);
+
+
 grid.addEventListener('mouseover', function(e){  
       mouseDown = true;
-      e.target.style.backgroundColor = 'red'
+      e.target.style.backgroundColor = `${pencilColor}`;
       
 
       })
-      
 
+
+
+//const cells = document.querySelectorAll('.cells');
+//console.log(cells);
+
+
+let buttonCells = document.querySelector('#buttonCells');
+buttonCells.addEventListener('click', function(e){
+      
+      hcells = document.getElementById('hcells').value;      
+      vcells = document.getElementById('vcells').value;
+      
+      divs(hcells,vcells);
+      
+})
+      
+let buttonColor = document.querySelector('#buttonColor');
+buttonColor.addEventListener('click', function(e){
+      pencilColor = document.getElementById('color').value;      
+})
 
 

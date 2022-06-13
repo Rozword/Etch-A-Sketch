@@ -1,11 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&family=Roboto&display=swap');
+
 #grid {
     display: flex;
     flex-wrap: wrap;    
-    align-self: center;
-    margin: auto;
-    margin-top: 528px;
-    border-radius: 5px;
-   
+    margin: auto;  
+    flex-shrink:1;
+    width: 680px;
+    height: 490px;    
+    border: 8px solid black;
+    border-radius: 15px;    
+    min-width: 0;
+    min-height: 0;
+    position: absolute;
+    z-index: 2;
+    
+    
+    background-color: grey;
+    
     
     
 }
@@ -21,24 +32,68 @@ body{
    
     margin:auto;
     background-position: center;
-    height: 100%;
+    height: 100vh;
+    max-width: 1200px;
 }
 #sketch{
-    background-image: url(images/Etch-a-sketch1500.png);
-    width: 1900px;
-    height: 100%;
-    
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    /*background-image: url(images/Etch-a-sketch2636.png);*/
+    width: 100%;
+    height: 95%;    
+   
+   
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    flex-shrink: 0;
+    justify-content: space-evenly;
     align-items: center;
-    justify-content: center;
-    margin: auto;
+    min-width: 0;
+    min-height: 0;
+    position: relative;
+    gap:0px ;
     
-    background-position: center;
+    background-position: center;    
+
 }
+
+#forms{
+    
+    display: flex;
+    gap: 50px;
+    cursor: pointer;
+    padding: 16px 32px;
+}
+
+label{
+    font-family: 'Aclonica';
+    font-weight: bold;
+
+}
+input{
+    border: 2px solid  #04AA6D;
+    border-radius: 4px;
+    padding: 5px 5px;
+  }
+
+#buttonCells, #buttonColor{
+    background-color: #04AA6D;
+    color: white;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 15px;
+
+}
+
+#pic {
+
+    height: 85%;
+    width: 100%;
+    object-fit: contain;
+    
+    z-index: 1;
+    display: flex;
+    
+}
+
 html {
     height: 100%;
 }
